@@ -13,8 +13,32 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="header__wrapper">
+          <a class="header__logo">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/logo.png" width="35" height="35">
+              <img class="header__logo-img" src="img/logo-long.png" width="215" height="55" alt="Умные технологии">
+            </picture>
+          </a>
+          <ul class="header__contacts">
+            <li class="header__contact">
+              <svg class="header__icon" width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#header-email"></use>
+              </svg>
+              <span>info@sd.ru</span>
+            </li>
+            <li class="header__contact">
+              <svg class="header__icon" width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#header-phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </li>
+          </ul>
+          <button class="header__button btn" type="button">
+            Заказать звонок
+          </button>
+        </div>
       </header>
       <main>
         <section class="intro">
