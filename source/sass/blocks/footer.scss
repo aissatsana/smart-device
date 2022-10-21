@@ -115,6 +115,7 @@
 
   .footer__nav-list {
     display: none;
+    margin-top: 10px;
   }
 
   .footer__title {
@@ -146,6 +147,12 @@
     &::before {
       transform: rotate(90deg);
     }
+
+    &--active {
+      &::before {
+        content: none;
+      }
+    }
   }
 
   .footer__contacts {
@@ -161,10 +168,6 @@
       width: 100%;
       height: 1px;
       background-color: rgba($color-white-accent, 0.7);
-    }
-
-    .footer__accordeon::before {
-      content: none;
     }
   }
 

@@ -13,6 +13,32 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  let aboutUsButton = document.querySelector('.about-us__button');
+  let aboutUsDescr = document.querySelector('.about-us__description--hidden');
+  addEventListener('click', () => {
+    if (aboutUsButton.textContent != 'Свернуть') {
+      aboutUsDescr.classList.remove('about-us__description--hidden');
+      aboutUsButton.textContent = "Свернуть";
+    } else {
+      aboutUsDescr.classList.add('about-us__description--hidden');
+      aboutUsButton.textContent = "Подробнее";
+    }
+  })
+
+  let accordeonButtons = document.querySelectorAll('.footer__accordeon');
+  for (let i = 0; i < accordeonButtons.length; i++) {
+    accordeonButtons[i].addEventListener('click', () => {
+      accordeonButtons[i].classList.toggle('footer__accordeon--active');
+
+      let panel = accordeonButtons[i].nextElementSibling;
+      if (getComputedStyle(panel).display === "none") {
+        panel.style.display = "block";
+      } else {
+        panel.style.display = "none";
+      }
+    })
+  }
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

@@ -32,6 +32,10 @@
   font-family: $font-Roboto;
 }
 
+.promo__button-text--mobile {
+  display: none;
+}
+
 @include vp-1023 {
   .promo {
     padding: 80px 50px 205px;
@@ -72,5 +76,13 @@
     margin: 0;
     width: 100%;
     justify-content: center;
+  }
+
+  .promo__button-text--desktop {
+    display: none;
+  }
+
+  .promo__button-text--mobile {
+    display: inline;
   }
 }
