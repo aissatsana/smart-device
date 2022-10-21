@@ -1,0 +1,69 @@
+.about-us {
+  padding: 0 0 120px 250px;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-us__mask {
+  font-family: $font-Roboto;
+  font-weight: 700;
+  font-size: 156.25px;
+  line-height: 219.72px;
+  position: absolute;
+  left: -100px;
+  top: 30px;
+  transform: rotate(-90deg);
+
+  background: url("../img/about-2022.jpg");
+  background-clip: text;
+  color: transparent;
+}
+
+.about-us__title {
+  margin: 0 0 15px;
+  font-size: 36px;
+  line-height: 50.63px;
+  font-family: $font-Roboto;
+  font-weight: 400;
+}
+
+.about-us__description {
+  font-size: 16px;
+  line-height: 21.5px;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.about-us__button {
+  padding: 8px 13px 8px 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $font-Roboto;
+  width: 155px;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
+@include vp-1023 {
+  .about-us {
+    padding: 0 50px 80px 225px;
+  }
+
+  .about-us__mask {
+    left: -29px;
+  }
+}
+
+@include vp-767 {
+  .about-us {
+    padding: 0 25px 80px;
+  }
+
+  .about-us__mask {
+    display: none;
+  }
+}

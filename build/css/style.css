@@ -645,8 +645,12 @@ button,
   transition: opacity 0.3s ease;
 }
 
-.btn--red {
-  background-color: #ff1553;
+.btn--white {
+  background-color: transparent;
+  color: #00b2ff;
+  font-weight: 700;
+  border: 1px solid #00b2ff;
+  border-radius: 3px;
 }
 
 .btn:disabled {
@@ -777,8 +781,10 @@ button,
   color: #f2f5f6;
   font-family: "PT Mono", "Arial", sans-serif;
   padding: 30px 0;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .header__wrapper {
@@ -822,6 +828,10 @@ button,
 
 .header__contact:not(:last-child) {
   margin-right: 30px;
+}
+
+.header__link {
+  color: #f2f5f6;
 }
 
 .header__icon {
@@ -976,7 +986,7 @@ button,
 }
 
 .main {
-  margin-top: 100px;
+  margin-top: -20px;
 }
 
 .features {
@@ -1035,6 +1045,60 @@ button,
   margin: 0;
 }
 
+.about-us {
+  padding: 0 0 120px 250px;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-us__mask {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 156.25px;
+  line-height: 219.72px;
+  position: absolute;
+  left: -100px;
+  top: 30px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background: url("../img/about-2022.jpg");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-us__title {
+  margin: 0 0 15px;
+  font-size: 36px;
+  line-height: 50.63px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.about-us__description {
+  font-size: 16px;
+  line-height: 21.5px;
+}
+
+.about-us__description--hidden {
+  display: none;
+}
+
+.about-us__button {
+  padding: 8px 13px 8px 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  width: 155px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1088,11 +1152,12 @@ button,
   }
 
   .header__button,
-  .header__contact span {
+  .header__link span {
     display: none;
   }
 
   .header {
+    position: static;
     padding: 20px 70px 25px 50px;
   }
 
@@ -1155,6 +1220,14 @@ button,
 
   .features-list__item {
     padding: 40px 30px 35px 45px;
+  }
+
+  .about-us {
+    padding: 0 50px 80px 225px;
+  }
+
+  .about-us__mask {
+    left: -29px;
   }
 }
 
@@ -1336,6 +1409,14 @@ button,
   .features-list__description {
     font-size: 14px;
     line-height: 18.9px;
+  }
+
+  .about-us {
+    padding: 0 25px 80px;
+  }
+
+  .about-us__mask {
+    display: none;
   }
 }
 

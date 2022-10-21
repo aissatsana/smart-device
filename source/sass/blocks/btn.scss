@@ -10,8 +10,12 @@
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--white {
+    background-color: transparent;
+    color: $color-blue;
+    font-weight: 700;
+    border: 1px solid $color-blue;
+    border-radius: 3px;
   }
 
   &:disabled {
