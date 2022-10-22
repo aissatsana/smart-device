@@ -1056,7 +1056,8 @@ button,
   position: relative;
 }
 
-.about-us__mask {
+.about-us::before {
+  content: "2022";
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 156.25px;
@@ -1101,6 +1102,75 @@ button,
   justify-content: center;
   font-size: 14px;
   line-height: 16.41px;
+}
+
+.services {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #f2f5f6;
+  background-color: #041827;
+  padding: 70px 50px 140px;
+}
+
+.services__container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.services__title {
+  margin: 0 0 50px;
+  font-size: 36px;
+  line-height: 50.63px;
+  font-weight: 400;
+}
+
+.services__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.services__item {
+  background: url("../img/promo-bg.jpg");
+}
+
+.services__link {
+  position: relative;
+  display: block;
+  padding: 50px 80px 0 40px;
+  height: 650px;
+  width: 350px;
+}
+
+.services__subtitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #f2f5f6;
+}
+
+.services__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #00b2ff;
+}
+
+.services__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 /* @mixin hover-focus {
@@ -1230,8 +1300,30 @@ button,
     padding: 0 50px 80px 225px;
   }
 
-  .about-us__mask {
+  .about-us::before {
     left: -29px;
+  }
+
+  .services {
+    padding: 60px 50px 75px;
+  }
+
+  .services__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services__link {
+    width: 100%;
+    height: 250px;
+    padding: 40px 45px;
+  }
+
+  .services__subtitle {
+    width: 230px;
   }
 }
 
@@ -1428,8 +1520,31 @@ button,
     padding: 0 25px 80px;
   }
 
-  .about-us__mask {
-    display: none;
+  .about-us::before {
+    content: none;
+  }
+
+  .services {
+    padding: 50px 25px 86px;
+  }
+
+  .services__title {
+    font-size: 28px;
+    line-height: 39.38px;
+    margin-bottom: 40px;
+  }
+
+  .services__link {
+    padding: 30px;
+  }
+
+  .services__subtitle {
+    width: 150px;
+  }
+
+  .services__button {
+    width: 40px;
+    height: 40px;
   }
 }
 

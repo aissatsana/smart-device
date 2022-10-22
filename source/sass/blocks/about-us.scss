@@ -3,21 +3,22 @@
   max-width: 1220px;
   margin: 0 auto;
   position: relative;
-}
 
-.about-us__mask {
-  font-family: $font-Roboto;
-  font-weight: 700;
-  font-size: 156.25px;
-  line-height: 219.72px;
-  position: absolute;
-  left: -100px;
-  top: 30px;
-  transform: rotate(-90deg);
+  &::before {
+    content: "2022";
+    font-family: $font-Roboto;
+    font-weight: 700;
+    font-size: 156.25px;
+    line-height: 219.72px;
+    position: absolute;
+    left: -100px;
+    top: 30px;
+    transform: rotate(-90deg);
 
-  background: url("../img/about-2022.jpg");
-  background-clip: text;
-  color: transparent;
+    background: url("../img/about-2022.jpg");
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .about-us__title {
@@ -51,19 +52,19 @@
 @include vp-1023 {
   .about-us {
     padding: 0 50px 80px 225px;
-  }
 
-  .about-us__mask {
-    left: -29px;
+    &::before {
+      left: -29px;
+    }
   }
 }
 
 @include vp-767 {
   .about-us {
     padding: 0 25px 80px;
-  }
 
-  .about-us__mask {
-    display: none;
+    &::before {
+      content: none;
+    }
   }
 }
