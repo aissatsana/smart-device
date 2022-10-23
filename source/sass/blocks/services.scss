@@ -26,7 +26,21 @@
 }
 
 .services__item {
-  background: url("../img/promo-bg.jpg");
+  background: url("../img/services-bg.png");
+  background-size: 400%;
+  background-position-y: -200px;
+
+  &:first-child {
+    background-position-x: -150px;
+  }
+
+  &:nth-child(2) {
+    background-position-x: -520px;
+  }
+
+  &:nth-child(3) {
+    background-position-x: -890px;
+  }
 }
 
 .services__link {
