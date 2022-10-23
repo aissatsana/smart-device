@@ -27,6 +27,7 @@
 
 .feedback__title {
   font-family: $font-Roboto;
+  font-weight: 400;
   font-size: 36px;
   line-height: 50.63px;
   margin: 0 0 15px;
@@ -38,3 +39,35 @@
   margin: 0 0 25px;
 }
 
+@include vp-1023 {
+  .feedback {
+    background: $color-blue;
+  }
+
+  .feedback__container {
+    padding: 50px 50px 130px;
+    max-width: none;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+@include vp-767 {
+  .feedback__container {
+    padding: 50px 25px 90px;
+  }
+
+  .feedback__title {
+    font-size: 30px;
+    line-height: 42.19px;
+    margin-bottom: 20px;
+  }
+
+  .feedback__text {
+    font-size: 14px;
+    line-height: 18.82px;
+    margin-bottom: 40px;
+  }
+}
