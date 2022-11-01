@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let accordeonButtons = document.querySelectorAll('.footer__accordeon');
   for (let i = 0; i < accordeonButtons.length; i++) {
     accordeonButtons[i].addEventListener('click', () => {
+      //accordeonButtons.forEach((n => n.classList.remove('footer__accordeon--active')));
       accordeonButtons[i].classList.toggle('footer__accordeon--active');
 
       let panel = accordeonButtons[i].nextElementSibling;
@@ -39,6 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  $("#feedback-phone").mask("+7(999) 999-9999");
+  $("#modal-phone").mask("+7(999) 999-9999");
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

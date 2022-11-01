@@ -1,6 +1,5 @@
 .social-list {
   padding: 0;
-  margin: 0;
   list-style-type: none;
   display: flex;
 }
@@ -8,6 +7,15 @@
 .social-list__item {
   &:not(:last-child) {
     margin-right: 25px;
+  }
+}
+
+.social-list__link {
+  width: 30px;
+  height: 30px;
+
+  @include hover-focus {
+    opacity: 0.8;
   }
 }
 

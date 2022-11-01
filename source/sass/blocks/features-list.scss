@@ -11,7 +11,8 @@
 .features-list__item {
   border: 1px solid $color-bg-features;
   border-left: 5px solid $color-blue;
-  padding: 40px 45px 35px 36px;
+  padding: 44px 45px 35px 42px;
+  min-height: 300px;
 
   &:hover {
     background-color: $color-blue;
@@ -29,7 +30,7 @@
 
 .features-list__icon {
   fill: $color-blue;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .features-list__title {
@@ -49,7 +50,16 @@
 
 @include vp-1023 {
   .features-list__item {
-    padding: 40px 30px 35px 45px;
+    padding: 40px 30px 32px 41px;
+    min-height: 360px;
+  }
+
+  .features-list__icon {
+    margin-bottom: 10px;
+  }
+
+  .features-list__title {
+    margin-bottom: 9px;
   }
 }
 
@@ -59,16 +69,31 @@
   }
 
   .features-list__item {
-    padding: 30px 30px 35px;
+    padding: 28px 26px 35px;
+    min-height: 0;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      .features-list__description {
+        min-height: 190px;
+      }
+    }
+  }
+
+  .features-list__icon {
+    width: 30px;
+    height: 30px;
   }
 
   .features-list__title {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 13px;
   }
 
   .features-list__description {
     font-size: 14px;
     line-height: 18.9px;
+    min-height: 140px;
   }
 }

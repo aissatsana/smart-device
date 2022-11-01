@@ -2,6 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 30px;
+
+  &--modal {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form__label {
@@ -18,6 +23,10 @@
 
   &::placeholder {
     color: $color-default-white;
+  }
+
+  @include hover-focus {
+    background-color: rgba($color-dark, 0.5);
   }
 }
 
