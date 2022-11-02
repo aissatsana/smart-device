@@ -18,6 +18,10 @@
     background: url("../img/about-2022.jpg");
     background-clip: text;
     color: transparent;
+
+    @include retina {
+      background-image: url("../img/about-2022@2x.jpg");
+    }
   }
 }
 

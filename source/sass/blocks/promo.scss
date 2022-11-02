@@ -2,10 +2,18 @@
   color: $color-white;
   background:
     linear-gradient(
-    rgba($color-bg-promo, 0.7),
+    rgba($color-bg-promo, 0.7) 70%,
     rgba($color-bg-promo, 0)),
     url("../img/promo-bg.jpg") no-repeat;
   background-size: cover;
+
+  @include retina {
+    background-image:
+      linear-gradient(
+      rgba($color-bg-promo, 0.7) 70%,
+      rgba($color-bg-promo, 0)),
+      url("../img/promo-bg@2x.jpg") no-repeat;
+  }
 }
 
 .promo__wrapper {

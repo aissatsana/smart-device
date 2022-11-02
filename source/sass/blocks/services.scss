@@ -27,6 +27,7 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .services__item {
@@ -49,6 +50,14 @@
 
   &--lighting {
     background-position-x: -890px;
+  }
+
+  @include retina {
+    background-image: linear-gradient(
+      to top,
+      rgba($color-dark, 0.5),
+      rgba($color-dark, 0.5)),
+      url("../img/services-bg@2x.png") no-repeat;
   }
 }
 

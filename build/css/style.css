@@ -814,7 +814,7 @@ button,
   background: linear-gradient(#041827 84.9%, rgba(4, 24, 39, 0) 100%);
   color: #f2f5f6;
   font-family: "PT Mono", "Arial", sans-serif;
-  padding: 30px 0;
+  padding: 30px;
   position: sticky;
   top: 0;
   width: 100%;
@@ -833,6 +833,8 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 1220px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .header__logo {
@@ -972,6 +974,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .social-list__item:not(:last-child) {
@@ -1021,9 +1025,9 @@ button,
 
 .promo {
   color: #f2f5f6;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo-bg.jpg") no-repeat;
-  background: -o-linear-gradient(rgba(25, 32, 36, 0.7), rgba(25, 32, 36, 0)), url("../img/promo-bg.jpg") no-repeat;
-  background: linear-gradient(rgba(25, 32, 36, 0.7), rgba(25, 32, 36, 0)), url("../img/promo-bg.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo-bg.jpg") no-repeat;
+  background: -o-linear-gradient(rgba(25, 32, 36, 0.7) 70%, rgba(25, 32, 36, 0)), url("../img/promo-bg.jpg") no-repeat;
+  background: linear-gradient(rgba(25, 32, 36, 0.7) 70%, rgba(25, 32, 36, 0)), url("../img/promo-bg.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -1219,6 +1223,8 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .services__item {
@@ -2042,5 +2048,23 @@ button,
 
   .control__mark:hover:not(.focus-visible) {
     opacity: 1;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo-bg@2x.jpg") no-repeat;
+    background-image: -o-linear-gradient(rgba(25, 32, 36, 0.7) 70%, rgba(25, 32, 36, 0)), url("../img/promo-bg@2x.jpg") no-repeat;
+    background-image: linear-gradient(rgba(25, 32, 36, 0.7) 70%, rgba(25, 32, 36, 0)), url("../img/promo-bg@2x.jpg") no-repeat;
+  }
+
+  .about-us::before {
+    background-image: url("../img/about-2022@2x.jpg");
+  }
+
+  .services__item {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/services-bg@2x.png") no-repeat;
+    background-image: -o-linear-gradient(bottom, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/services-bg@2x.png") no-repeat;
+    background-image: linear-gradient(to top, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/services-bg@2x.png") no-repeat;
   }
 }

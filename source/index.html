@@ -17,10 +17,10 @@
         <div class="header__wrapper">
           <a class="header__logo">
             <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/logo.webp" width="35" height="35">
-              <source type="image/webp" srcset="img/logo-long.webp" width="215" height="55">
-              <source media="(max-width: 767px)" srcset="img/logo.png" width="35" height="35">
-              <img class="header__logo-img" src="img/logo-long.png" width="215" height="55" alt="Умные технологии">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/logo.webp 1x, img/logo@2x.webp" width="35" height="35">
+              <source type="image/webp" srcset="img/logo-long.webp 1x, img/logo-long@2x.webp 2x" width="215" height="55">
+              <source media="(max-width: 767px)" srcset="img/logo.png 1x, img/logo@2x.png" width="35" height="35">
+              <img class="header__logo-img" src="img/logo-long.png" srcset="img/logo-long@2x.png 2x" width="215" height="55" alt="Умные технологии">
             </picture>
           </a>
           <ul class="header__contacts">
@@ -197,8 +197,8 @@
           <div class="footer__links">
             <a class="footer__logo">
               <picture>
-                <source type="image/webp" srcset="img/logo-long.webp" width="215" height="55">
-                <img class="footer__logo-img" src="img/logo-long.png" width="215" height="55" alt="Умные технологии">
+                <source type="image/webp" srcset="img/logo-long.webp 1x, img/logo-long@2x.webp" width="215" height="55">
+                <img class="footer__logo-img" src="img/logo-long.png" srcset="img/logo-long@2x.png 2x" width="215" height="55" alt="Умные технологии">
               </picture>
             </a>
             <ul class="footer__socials social-list">
@@ -356,9 +356,9 @@
       </div>
     </div>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="js/vendor.min.js" type="module"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>
