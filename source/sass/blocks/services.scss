@@ -39,15 +39,15 @@
   background-size: 400%;
   background-position-y: -200px;
 
-  &:first-child {
+  &--production {
     background-position-x: -150px;
   }
 
-  &:nth-child(2) {
+  &--mounting {
     background-position-x: -520px;
   }
 
-  &:nth-child(3) {
+  &--lighting {
     background-position-x: -890px;
   }
 }
@@ -101,6 +101,22 @@
 
   .services__item {
     width: 100%;
+    background-size: 200%;
+
+    &--production {
+      background-position-x: -142px;
+      background-position-y: -517px;
+    }
+
+    &--mounting {
+      background-position-x: -589px;
+      background-position-y: -356px;
+    }
+
+    &--lighting {
+      background-position-x: -135px;
+      background-position-y: -392px;
+    }
   }
 
   .services__title {
@@ -121,6 +137,24 @@
 @include vp-767 {
   .services {
     padding: 46px 25px 86px;
+  }
+
+  .services__item {
+    background-size: 550%;
+    background-position-x: -400px;
+
+    &--production {
+      background-position-y: -1382px;
+    }
+
+    &--mounting {
+      background-position-y: -1656px;
+    }
+
+    &--lighting {
+      background-position-x: -897px;
+      background-position-y: -1466px;
+    }
   }
 
   .services__title {

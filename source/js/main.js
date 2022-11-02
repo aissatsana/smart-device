@@ -13,10 +13,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  let aboutUsButton = document.querySelector('.about-us__button');
-  let aboutUsDescr = document.querySelector('.about-us__description--hidden');
+  const aboutUsButton = document.querySelector('.about-us__button');
+  const aboutUsDescr = document.querySelector('.about-us__description--hidden');
   addEventListener('click', () => {
-    if (aboutUsButton.textContent != 'Свернуть') {
+    if (aboutUsButton.textContent !== 'Свернуть') {
       aboutUsDescr.classList.remove('about-us__description--hidden');
       aboutUsButton.textContent = "Свернуть";
     } else {
@@ -25,10 +25,24 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  let accordeonButtons = document.querySelectorAll('.footer__accordeon');
+  const accordeonButtons = document.querySelectorAll('.footer__accordeon');
+
+  if (window.innerWidth < 767) {
+    accordeonButtons.forEach((n) => {
+      n.classList.remove('footer__accordeon--active');
+      n.nextElementSibling.style.display = 'none';
+    });
+  }
+
   for (let i = 0; i < accordeonButtons.length; i++) {
-    accordeonButtons[i].addEventListener('click', () => {
-      //accordeonButtons.forEach((n => n.classList.remove('footer__accordeon--active')));
+    accordeonButtons[i].addEventListener('click', function() {
+      accordeonButtons.forEach((n) => {
+        if (n !== this) {
+          n.classList.remove('footer__accordeon--active');
+          n.nextElementSibling.style.display = 'none';
+        }
+      });
+
       accordeonButtons[i].classList.toggle('footer__accordeon--active');
 
       let panel = accordeonButtons[i].nextElementSibling;
@@ -39,6 +53,9 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
+
+
+
 
   $("#feedback-phone").mask("+7(999) 999-9999");
   $("#modal-phone").mask("+7(999) 999-9999");
