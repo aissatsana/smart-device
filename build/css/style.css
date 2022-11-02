@@ -1229,23 +1229,22 @@ button,
 
 .services__item {
   width: 28.6%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/services-bg.png");
-  background: -o-linear-gradient(bottom, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/services-bg.png");
-  background: linear-gradient(to top, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/services-bg.png");
-  background-size: 400%;
-  background-position-y: -200px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5)));
+  background-image: -o-linear-gradient(bottom, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5));
+  background-image: linear-gradient(to top, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5));
+  background-size: cover;
 }
 
 .services__item--production {
-  background-position-x: -150px;
+  background-image: url("../img/services-bg-production-desktop.png");
 }
 
 .services__item--mounting {
-  background-position-x: -520px;
+  background-image: url("../img/services-bg-mounting-desktop.png");
 }
 
 .services__item--lighting {
-  background-position-x: -890px;
+  background-image: url("../img/services-bg-lighting-desktop.png");
 }
 
 .services__link {
@@ -1612,22 +1611,19 @@ button,
 
   .services__item {
     width: 100%;
-    background-size: 200%;
+    background-size: cover;
   }
 
   .services__item--production {
-    background-position-x: -142px;
-    background-position-y: -517px;
+    background-image: url("../img/services-bg-production-tablet.png");
   }
 
   .services__item--mounting {
-    background-position-x: -589px;
-    background-position-y: -356px;
+    background-image: url("../img/services-bg-mounting-tablet.png");
   }
 
   .services__item--lighting {
-    background-position-x: -135px;
-    background-position-y: -392px;
+    background-image: url("../img/services-bg-lighting-tablet.png");
   }
 
   .services__title {
@@ -1671,6 +1667,20 @@ button,
 
   .form__input--textarea {
     padding-top: 32px;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .services__item--production {
+    background-image: url("../img/services-bg-production-tablet@2x.png");
+  }
+
+  .services__item--mounting {
+    background-image: url("../img/services-bg-mounting-tablet@2x.png");
+  }
+
+  .services__item--lighting {
+    background-image: url("../img/services-bg-lighting-tablet@2x.png");
   }
 }
 
@@ -1929,22 +1939,16 @@ button,
     padding: 46px 25px 86px;
   }
 
-  .services__item {
-    background-size: 550%;
-    background-position-x: -400px;
-  }
-
   .services__item--production {
-    background-position-y: -1382px;
+    background-image: url("../img/services-bg-production-mobile.png");
   }
 
   .services__item--mounting {
-    background-position-y: -1656px;
+    background-image: url("../img/services-bg-mounting-mobile.png");
   }
 
   .services__item--lighting {
-    background-position-x: -897px;
-    background-position-y: -1466px;
+    background-image: url("../img/services-bg-lighting-mobile.png");
   }
 
   .services__title {
@@ -2012,6 +2016,20 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .services__item--production {
+    background-image: url("../img/services-bg-production-mobile@2x.png");
+  }
+
+  .services__item--mounting {
+    background-image: url("../img/services-bg-mounting-mobile@2x.png");
+  }
+
+  .services__item--lighting {
+    background-image: url("../img/services-bg-lighting-mobile@2x.png");
+  }
+}
+
 @media (hover: hover) {
   .btn--white:hover:not(.focus-visible) {
     background-color: rgba(0, 178, 255, 0.7);
@@ -2062,9 +2080,15 @@ button,
     background-image: url("../img/about-2022@2x.jpg");
   }
 
-  .services__item {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/services-bg@2x.png") no-repeat;
-    background-image: -o-linear-gradient(bottom, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/services-bg@2x.png") no-repeat;
-    background-image: linear-gradient(to top, rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/services-bg@2x.png") no-repeat;
+  .services__item--production {
+    background-image: url("../img/services-bg-production-desktop@2x.png");
+  }
+
+  .services__item--mounting {
+    background-image: url("../img/services-bg-mounting-desktop@2x.png");
+  }
+
+  .services__item--lighting {
+    background-image: url("../img/services-bg-lighting-desktop@2x.png");
   }
 }

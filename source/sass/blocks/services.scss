@@ -32,32 +32,34 @@
 
 .services__item {
   width: 28.6%;
-  background: linear-gradient(
+  background-image: linear-gradient(
     to top,
     rgba($color-dark, 0.5),
-    rgba($color-dark, 0.5)),
-    url("../img/services-bg.png");
-  background-size: 400%;
-  background-position-y: -200px;
+    rgba($color-dark, 0.5));
+  background-size: cover;
 
   &--production {
-    background-position-x: -150px;
+    background-image: url("../img/services-bg-production-desktop.png");
+
+    @include retina {
+      background-image: url("../img/services-bg-production-desktop@2x.png");
+    }
   }
 
   &--mounting {
-    background-position-x: -520px;
+    background-image: url("../img/services-bg-mounting-desktop.png");
+
+    @include retina {
+      background-image: url("../img/services-bg-mounting-desktop@2x.png");
+    }
   }
 
   &--lighting {
-    background-position-x: -890px;
-  }
+    background-image: url("../img/services-bg-lighting-desktop.png");
 
-  @include retina {
-    background-image: linear-gradient(
-      to top,
-      rgba($color-dark, 0.5),
-      rgba($color-dark, 0.5)),
-      url("../img/services-bg@2x.png") no-repeat;
+    @include retina {
+      background-image: url("../img/services-bg-lighting-desktop@2x.png");
+    }
   }
 }
 
@@ -110,21 +112,30 @@
 
   .services__item {
     width: 100%;
-    background-size: 200%;
+    background-size: cover;
 
     &--production {
-      background-position-x: -142px;
-      background-position-y: -517px;
+      background-image: url("../img/services-bg-production-tablet.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-production-tablet@2x.png");
+      }
     }
 
     &--mounting {
-      background-position-x: -589px;
-      background-position-y: -356px;
+      background-image: url("../img/services-bg-mounting-tablet.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-mounting-tablet@2x.png");
+      }
     }
 
     &--lighting {
-      background-position-x: -135px;
-      background-position-y: -392px;
+      background-image: url("../img/services-bg-lighting-tablet.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-lighting-tablet@2x.png");
+      }
     }
   }
 
@@ -149,20 +160,28 @@
   }
 
   .services__item {
-    background-size: 550%;
-    background-position-x: -400px;
-
     &--production {
-      background-position-y: -1382px;
+      background-image: url("../img/services-bg-production-mobile.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-production-mobile@2x.png");
+      }
     }
 
     &--mounting {
-      background-position-y: -1656px;
+      background-image: url("../img/services-bg-mounting-mobile.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-mounting-mobile@2x.png");
+      }
     }
 
     &--lighting {
-      background-position-x: -897px;
-      background-position-y: -1466px;
+      background-image: url("../img/services-bg-lighting-mobile.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-lighting-mobile@2x.png");
+      }
     }
   }
 
