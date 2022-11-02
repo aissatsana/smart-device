@@ -42,7 +42,9 @@
     background-image: url("../img/services-bg-production-desktop.png");
 
     @include retina {
-      background-image: url("../img/services-bg-production-desktop@2x.png");
+      @media (min-width: $vp-1024) {
+        background-image: url("../img/services-bg-production-desktop@2x.png");
+      }
     }
   }
 
@@ -50,7 +52,9 @@
     background-image: url("../img/services-bg-mounting-desktop.png");
 
     @include retina {
-      background-image: url("../img/services-bg-mounting-desktop@2x.png");
+      @media (min-width: $vp-1024) {
+        background-image: url("../img/services-bg-mounting-desktop@2x.png");
+      }
     }
   }
 
@@ -58,7 +62,9 @@
     background-image: url("../img/services-bg-lighting-desktop.png");
 
     @include retina {
-      background-image: url("../img/services-bg-lighting-desktop@2x.png");
+      @media (min-width: $vp-1024) {
+        background-image: url("../img/services-bg-lighting-desktop@2x.png");
+      }
     }
   }
 }

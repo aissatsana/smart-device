@@ -1466,6 +1466,20 @@ button,
   }
 */
 
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1024px), (-o-min-device-pixel-ratio: 3/2) and (min-width: 1024px), (min-resolution: 144dpi) and (min-width: 1024px), (min-resolution: 1.5dppx) and (min-width: 1024px) {
+  .services__item--production {
+    background-image: url("../img/services-bg-production-desktop@2x.png");
+  }
+
+  .services__item--mounting {
+    background-image: url("../img/services-bg-mounting-desktop@2x.png");
+  }
+
+  .services__item--lighting {
+    background-image: url("../img/services-bg-lighting-desktop@2x.png");
+  }
+}
+
 @media (max-width: 1439px) {
   .container {
     padding: 0 32px;
@@ -2077,17 +2091,5 @@ button,
 
   .about-us::before {
     background-image: url("../img/about-2022@2x.jpg");
-  }
-
-  .services__item--production {
-    background-image: url("../img/services-bg-production-desktop@2x.png");
-  }
-
-  .services__item--mounting {
-    background-image: url("../img/services-bg-mounting-desktop@2x.png");
-  }
-
-  .services__item--lighting {
-    background-image: url("../img/services-bg-lighting-desktop@2x.png");
   }
 }
