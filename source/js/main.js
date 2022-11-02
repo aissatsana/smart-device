@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import IMask from 'imask';
 
 // ---------------------------------
 
@@ -54,11 +55,14 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  const phoneInputs = document.querySelectorAll('#phone');
+  phoneInputs.forEach(phone => {
+    var phoneMask = IMask(phone, {
+      mask: '+{7}(000)000-00-00'
+    });
+  });
 
 
-
-  $("#feedback-phone").mask("+7(999) 999-9999");
-  $("#modal-phone").mask("+7(999) 999-9999");
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
