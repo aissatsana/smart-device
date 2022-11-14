@@ -25,7 +25,7 @@
   }
 }
 
-.about-us__title {
+.about-us h2 {
   margin: 0 0 15px;
   font-size: 36px;
   line-height: 50.63px;
@@ -33,14 +33,14 @@
   font-weight: 400;
 }
 
-.about-us__description {
+.about-us p {
   font-size: 16px;
   line-height: 21.5px;
   margin: 0 0 21px;
+}
 
-  &--hidden {
-    display: none;
-  }
+.about-us__description--hidden {
+  display: none;
 }
 
 .about-us__button {
@@ -66,7 +66,7 @@
     }
   }
 
-  .about-us__title {
+  .about-us h2 {
     margin-bottom: 13px;
   }
 
@@ -84,27 +84,28 @@
     }
   }
 
-  .about-us__title {
+  .about-us h2 {
     font-size: 28px;
     line-height: 39.4px;
     margin-bottom: 9px;
   }
 
-  .about-us__description {
+  .about-us p {
     font-size: 14px;
     line-height: 19px;
 
-    &--mobile-hidden {
-      display: none;
+    &:not(:first-of-type) {
+      margin: 21px 0 0;
     }
+  }
 
-    &:nth-of-type(2) {
-      margin-bottom: 10px;
-    }
+  .about-us__text--mobile-hidden {
+    display: none;
   }
 
   .about-us__button {
     padding: 8px 15px 12px;
     width: 130px;
+    margin-top: 10px;
   }
 }

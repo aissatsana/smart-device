@@ -36,13 +36,14 @@
   list-style-type: none;
   display: flex;
   align-items: center;
+  margin-bottom: 9px;
 }
 
 .header__contact {
   width: 225px;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 26px;
   }
 }
 
@@ -57,16 +58,21 @@
 .header__icon {
   position: relative;
   top: 5px;
+  left: -6px;
   fill: $color-blue;
 }
 
 .header__button {
+  font-size: 14px;
+  line-height: 16.4px;
+  letter-spacing: 0.9px;
   background-color: transparent;
   padding: 10px 15px;
   border: 1px solid $color-white;
   border-radius: 3px;
   align-items: center;
   margin-right: 60px;
+  margin-bottom: 4px;
 }
 
 @include vp-1023 {
@@ -90,7 +96,8 @@
   }
 
   .header__icon {
-    top: -4px;
+    top: 0;
+    left: 0;
   }
 }
 

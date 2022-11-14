@@ -11,6 +11,10 @@
 
 .nav-list__item {
   max-width: 220px;
+
+  &:last-child {
+    margin-bottom: 23px;
+  }
 }
 
 .nav-list__link {

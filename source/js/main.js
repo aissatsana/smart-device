@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const aboutUsButton = document.querySelector('.about-us__button');
   const aboutUsDescr = document.querySelector('.about-us__description--hidden');
-  addEventListener('click', () => {
+  aboutUsButton.addEventListener('click', () => {
     if (aboutUsButton.textContent !== 'Свернуть') {
       aboutUsDescr.classList.remove('about-us__description--hidden');
       aboutUsButton.textContent = "Свернуть";
@@ -28,34 +28,46 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const accordeonButtons = document.querySelectorAll('.footer__accordeon');
 
-  if (window.innerWidth < 767) {
-    accordeonButtons.forEach((n) => {
-      n.classList.remove('footer__accordeon--active');
-      n.nextElementSibling.style.display = 'none';
-    });
-  }
+  window.addEventListener('resize', () => {
+    resizeWindow();
+  });
+
+  const resizeWindow = () => {
+      if (window.innerWidth < 767) {
+        accordeonButtons.forEach((n) => {
+          n.classList.remove('footer__accordeon--active');
+          n.nextElementSibling.style.maxHeight = null;
+        })}
+      else {
+        accordeonButtons.forEach((n) => {
+          n.classList.add('footer__accordeon--active');
+          n.nextElementSibling.style.maxHeight = 'auto';
+        })
+      }
+    }
+
 
   for (let i = 0; i < accordeonButtons.length; i++) {
     accordeonButtons[i].addEventListener('click', function() {
       accordeonButtons.forEach((n) => {
         if (n !== this) {
           n.classList.remove('footer__accordeon--active');
-          n.nextElementSibling.style.display = 'none';
+          n.nextElementSibling.style.maxHeight = null;
         }
       });
 
       accordeonButtons[i].classList.toggle('footer__accordeon--active');
 
       let panel = accordeonButtons[i].nextElementSibling;
-      if (getComputedStyle(panel).display === "none") {
-        panel.style.display = "block";
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
       } else {
-        panel.style.display = "none";
+        panel.style.maxHeight = panel.scrollHeight + "px";
       }
     })
   }
 
-  const phoneInputs = document.querySelectorAll('#phone');
+  const phoneInputs = document.querySelectorAll('input[type="tel"]');
   phoneInputs.forEach(phone => {
     var phoneMask = IMask(phone, {
       mask: '+{7}(000)000-00-00'
@@ -66,6 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    resizeWindow();
     initModals();
   });
 });

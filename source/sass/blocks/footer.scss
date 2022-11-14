@@ -1,6 +1,7 @@
 .footer {
   background-color: $color-dark;
   color: rgba($color-default-white, 0.7);
+  padding: 0 50px;
 }
 
 .footer__container {
@@ -71,6 +72,10 @@
 }
 
 @include vp-1023 {
+  .footer {
+    padding: 0;
+  }
+
   .footer__container {
     padding: 50px 25px 65px 50px;
   }
@@ -89,7 +94,7 @@
   }
 
   .footer__socials {
-    margin: 0 0 5px;
+    margin: 0 5px 5px;
     align-items: center;
   }
 
@@ -101,7 +106,7 @@
 
 @include vp-767 {
   .footer__container {
-    padding: 35px 0;
+    padding: 33px 0 35px;
     flex-direction: column;
   }
 
@@ -132,7 +137,7 @@
   }
 
   .footer__nav {
-    padding: 20px 25px 23px;
+    padding: 20px 25px 0;
     position: relative;
 
     &::after {
@@ -144,14 +149,15 @@
       height: 1px;
       background-color: rgba($color-white-accent, 0.7);
     }
+
+    .footer__title {
+      margin-bottom: 25px;
+    }
   }
 
   .footer__content {
-    margin-top: 20px;
-  }
-
-  .footer__title {
-    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
   }
 
   .footer__accordeon {
@@ -188,7 +194,7 @@
   }
 
   .footer__contacts {
-    padding: 20px 25px 23px;
+    padding: 20px 25px 0;
     max-width: none;
     position: relative;
     font-size: 14px;
@@ -202,6 +208,11 @@
       width: 100%;
       height: 1px;
       background-color: rgba($color-white-accent, 0.7);
+      margin-top: 20px;
+    }
+
+    .footer__title {
+      margin-bottom: 20px;
     }
   }
 
@@ -210,6 +221,12 @@
   }
 
   .footer__phone {
-    margin-bottom: 10px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 }
